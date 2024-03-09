@@ -7,7 +7,7 @@ const MyProjects = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-center' id='myProjects' style={{ paddingTop: '3rem' }}>My Projects</h1>
+                    <h1 className='text-center pt-5' id='myProjects'>My Projects</h1>
                 </Col>
             </Row>
 
@@ -19,7 +19,7 @@ const MyProjects = () => {
                             {data.description.map((text, idx) => (
                                 <span key={idx}>
                                     {text.link ? (
-                                        <a href={text.link} target='_blank' className='anchor-lightblue'>
+                                        <a href={text.link} target='_blank' className='anchor-lightblue' rel='noreferrer'>
                                             {text.text}
                                         </a>
                                     ) : text.text}
@@ -30,16 +30,17 @@ const MyProjects = () => {
                             <img
                                 src={data.img}
                                 style={{ width: '75%' }}
+                                alt={data.title}
                             />
                         </div>
                         <div className='text-center my-3'>
-                            <a href={data.previewLink} target='_blank'>
+                            <a href={data.previewLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-primary border-0'>Preview</Button>
                             </a>
-                            <a href={data.frontendLink} target='_blank'>
+                            <a href={data.frontendLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-secondary border-0 mx-3'>Frontend Code</Button>
                             </a>
-                            <a href={data.backendLink} target='_blank'>
+                            <a href={data.backendLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-secondary border-0'>Backend Code</Button>
                             </a>
                         </div>

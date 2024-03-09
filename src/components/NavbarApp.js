@@ -26,6 +26,18 @@ const NavbarApp = () => {
         setTooltips({ ...tooltips, [tooltip]: !tooltips[tooltip] });
     };
 
+    const copyEmail = async () => {
+        try {
+            // Write the text to the clipboard
+            await navigator.clipboard.writeText('frank.jk.lee96@gmail.com');
+        } catch (err) {
+            console.error('Failed to copy text to clipboard:', err);
+        }
+    };
+
+    // Example usage:
+    // copyEmail();
+
     return (
         <Navbar color="black" light expand="md" sticky='top' id='top'>
             <NavbarToggler onClick={toggleNavbar} style={{ backgroundColor: 'white' }} />
@@ -47,8 +59,17 @@ const NavbarApp = () => {
             <Nav className="mr-auto" navbar>
                 <div className='d-flex'>
                     {navbarIcons.map((icon, index) => (
-                        <NavItem key={index} id={icon.id} className='mx-3'>
-                            <NavLink href={icon.link} target="_blank">
+                        <NavItem
+                            key={index}
+                            id={icon.id}
+                            className='mx-3'
+                            onClick={icon.id === 'emailTooltip' ? copyEmail : () => null}
+                        >
+                            <NavLink
+                                href={icon.link}
+                                target="_blank"
+                                style={{ cursor: icon.cursor && icon.cursor }}
+                            >
                                 <FontAwesomeIcon icon={icon.icon} size='xl' className='navlink navlink-white' />
                                 <Tooltip
                                     placement="bottom"

@@ -1,5 +1,5 @@
 import { Col, Container, Row, } from 'reactstrap';
-import banner2 from '../img/banner2.png';
+import banner from '../img/banner.png';
 import { introData } from '../data/introData';
 import { useState } from 'react';
 
@@ -23,15 +23,20 @@ const IntroSection = () => {
         }));
     };
 
+
+
     return (
         <>
             <div className='d-flex justify-content-center'>
                 <img
-                    src={banner2}
+                    src={banner}
                     className='homepage-banner'
                     id='introSection'
+                    alt='home page banner'
                 />
             </div>
+
+
 
             <Container>
                 <Row>

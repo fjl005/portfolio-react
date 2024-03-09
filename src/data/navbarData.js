@@ -29,13 +29,14 @@ export const navbarIcons = [
         id: 'fileTooltip',
         text: 'Resume',
         tooltip: 'resume',
-        // link: '',
+        link: 'https://drive.google.com/file/d/146-XiyNalefLul9IWdTfl2F3wnPYyzGG/view?usp=sharing',
     },
     {
         icon: faEnvelope,
         id: 'emailTooltip',
-        text: 'Email',
+        text: 'Copy Email',
         tooltip: 'email',
+        cursor: 'pointer'
         // link: '',
     }
 ];

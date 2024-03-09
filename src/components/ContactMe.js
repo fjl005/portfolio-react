@@ -6,7 +6,7 @@ const ContactMe = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-center' id='contactMe' style={{ paddingTop: '3rem' }}>Contact Me</h1>
+                    <h1 className='text-center pt-5' id='contactMe'>Contact Me</h1>
                 </Col>
             </Row>
         </Container>
