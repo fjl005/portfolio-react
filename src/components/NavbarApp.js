@@ -13,6 +13,8 @@ import { navbarIcons, navItems } from '../data/navbarData';
 
 const NavbarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [copiedEmail, setCopiedEmail] = useState(false);
+    const [timeoutId, setTimeoutId] = useState(null);
     const toggleNavbar = () => setIsOpen(prev => !prev);
 
     const [tooltips, setTooltips] = useState({
@@ -28,15 +30,24 @@ const NavbarApp = () => {
 
     const copyEmail = async () => {
         try {
-            // Write the text to the clipboard
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+                setTimeoutId(null);
+            }
+
+            setCopiedEmail(true);
             await navigator.clipboard.writeText('frank.jk.lee96@gmail.com');
+
+            const id = setTimeout(() => {
+                setCopiedEmail(false);
+                setTimeoutId(null);
+            }, 2000);
+
+            setTimeoutId(id);
         } catch (err) {
             console.error('Failed to copy text to clipboard:', err);
         }
     };
-
-    // Example usage:
-    // copyEmail();
 
     return (
         <Navbar color="black" light expand="md" sticky='top' id='top'>
@@ -68,23 +79,27 @@ const NavbarApp = () => {
                             <NavLink
                                 href={icon.link}
                                 target="_blank"
-                                style={{ cursor: icon.cursor && icon.cursor }}
+                                style={{ cursor: icon.cursor }}
                             >
-                                <FontAwesomeIcon icon={icon.icon} size='xl' className='navlink navlink-white' />
+                                <FontAwesomeIcon
+                                    icon={icon.icon}
+                                    size='xl'
+                                    className='navlink navlink-white'
+                                />
                                 <Tooltip
                                     placement="bottom"
                                     isOpen={tooltips[icon.tooltip]}
                                     target={icon.id}
                                     toggle={() => toggleTooltip(icon.tooltip)}
                                 >
-                                    {icon.text}
+                                    {copiedEmail ? icon.copied : icon.text}
                                 </Tooltip>
                             </NavLink>
                         </NavItem>
                     ))}
                 </div>
             </Nav>
-        </Navbar>
+        </Navbar >
     )
 }
 

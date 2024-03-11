@@ -36,6 +36,7 @@ export const navbarIcons = [
         id: 'emailTooltip',
         text: 'Copy Email',
         tooltip: 'email',
+        copied: 'Copied!',
         cursor: 'pointer'
         // link: '',
     }
