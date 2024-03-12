@@ -15,8 +15,16 @@ export const projectsData = [
             },
             {
                 link: false,
-                text: ') to optimize operations. Employing Passport for secure session management and Cloudinary for image assets, I developed intuitive React interfaces and managed sensitive data flow with MongoDB. The administrator can oversee orders, manage products, and track billing, while users enjoy features like Cart management, order history, and reviews. Public access is limited to viewing products and the shop.'
+                text: ') to optimize operations.'
             },
+        ],
+        list: [
+            `Employed Passport for secure session management`,
+            `Developed intuitive React interfaces and handled sensitive data flow via MongoDB`,
+            `Incorporated Cloudinary for managing image assets`,
+            `Administrator can oversee orders, manage products, and track billing`,
+            `Users enjoy features like Cart management, order history, and reviews`,
+            `Public access is limited to viewing products and the shop`,
         ],
         img: fetsyImage,
         previewLink: 'https://www.fetsyshoponline.com/',
@@ -36,11 +44,11 @@ export const projectsData = [
             },
             {
                 link: false,
-                text: ` website. I focused on understanding/employing the Board Game Atlas (BGA) API and integrating server-side data via Fetch API. The public can view user-made posts and create/update/delete posts themselves! The feature to browse games and forums from the BGA API was disbanded in `,
+                text: ` website. But because I used the Board Game Atlas (BGA) API, two sections of my project are now unavailable `,
             },
             {
                 link: 'https://www.boardgameatlas.com/',
-                text: `August 2023 when BGA shut down their site.`,
+                text: `due to their API shutdown in August 2023.`,
             },
             {
                 link: false,
@@ -62,6 +70,12 @@ export const projectsData = [
                 link: false,
                 text: ` presentations for my Nucamp Honors Certificate.`
             },
+        ],
+        list: [
+            `Established blog-like interface via React`,
+            `Integrated server-side data via Fetch API and Axios`,
+            `Handled image data via Cloudinary`,
+            `Any user can create, update, delete, and view posts`,
         ],
         img: boredgamesgaloreImage,
         previewLink: 'https://boredgamesgalore.onrender.com/',

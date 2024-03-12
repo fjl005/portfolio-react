@@ -26,6 +26,15 @@ const MyProjects = () => {
                                 </span>
                             ))}
                         </p>
+                        {data.list && (
+
+                            <ul>
+                                {data.list.map((point, idx) => (
+                                    <li key={idx}>{point}</li>
+                                ))}
+                            </ul>
+
+                        )}
                         <div className='text-center'>
                             <img
                                 src={data.img}

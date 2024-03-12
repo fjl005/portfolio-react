@@ -2,10 +2,14 @@ body {
     font-size: 12px;
 }
 
-
 .body-background {
     background-color: black;
     color: white;
+}
+
+#navbarTop {
+    position: fixed;
+    width: 100%;
 }
 
 .homepage-banner {

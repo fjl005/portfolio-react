@@ -4,26 +4,25 @@ import { introData } from '../data/introData';
 import { useState } from 'react';
 
 const IntroSection = () => {
-
     const [isHovered, setIsHovered] = useState({
         [introData[0].img.id]: false,
         [introData[1].img.id]: false,
         [introData[2].img.id]: false,
     });
+
     const handleMouseEnter = (imageId) => {
         setIsHovered(prev => ({
             ...prev,
             [imageId]: true,
         }));
     };
+
     const handleMouseLeave = (imageId) => {
         setIsHovered(prev => ({
             ...prev,
             [imageId]: false,
         }));
     };
-
-
 
     return (
         <>
@@ -35,8 +34,6 @@ const IntroSection = () => {
                     alt='home page banner'
                 />
             </div>
-
-
 
             <Container>
                 <Row>
