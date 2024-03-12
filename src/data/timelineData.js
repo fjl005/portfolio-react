@@ -4,13 +4,13 @@ import { faDna, faGraduationCap, faMicroscope } from '@fortawesome/free-solid-sv
 export const timelineData = [
     {
         index: 0,
-        date: 'JAN 2023 - PRESENT',
+        date: 'DEC 2022 - PRESENT',
         title: 'Full Stack Developer',
         subtitle: 'San Diego, CA',
         p: [
             {
                 link: false,
-                text: `I enrolled in `,
+                text: `I embarked my web development journey with an introductory HTML, CSS, and JavaScript course. Finding the content captivating, I enrolled in `,
             },
             {
                 link: 'https://www.nucamp.co/bootcamp-overview/full-stack-web-mobile-development',
@@ -18,7 +18,7 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: ` and graduated in June with an Honors certificate. After graduating, I studied data structures and algorithms on the side and continued working on projects (see Projects section).`,
+                text: ` and graduated in June with an Honors certificate; the bootcamp emphasized Bootstrap, React, React Native, Node.js, Express, and MongoDB.  After graduating, I studied data structures and algorithms on the side to bolster my computer science knowledge while continuing to build full-stack projects (see Projects section below).`,
             },
         ],
         icon: faReact,
@@ -31,7 +31,7 @@ export const timelineData = [
         p: [
             {
                 link: false,
-                text: `I joined `,
+                text: `Initially joining `,
             },
             {
                 link: 'https://www.crownbio.com/',
@@ -39,7 +39,7 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: ` as a Study Coordinator eventually promoted to a Study Director. After some time, I transitioned to the Project Manager role, which is my current role today.`,
+                text: ` as a Study Coordinator, I worked across departments to ensure smooth daily operations and plan future initiatives. Progressing to a Study Director, I continued these responsibilities at a higher level and also collaborated closely with various pharmaceutical clients in drafting study protocols and concluding reports. Now as a Project Manager, I focus on revenue milestones and develop documentation to improve operational processes.`,
             },
         ],
         icon: faMicroscope,
@@ -60,7 +60,15 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: `, I seized the chance to further explore bio research through the BS/MS Program. This involved defending a thesis based on my research on corticosterone's impact on stress-induced inhibition of neuronal activation. `,
+                text: `, I embraced the opportunity to explore bio research through the BS/MS Program. This included defending a thesis focused on my research in corticosterone's impact on stress-induced inhibition of neuronal activation. `,
+            },
+            {
+                link: 'https://escholarship.org/content/qt6q719888/qt6q719888.pdf?t=q89epl',
+                text: `Click here`,
+            },
+            {
+                link: false,
+                text: ` to see my Master's Thesis!`,
             },
         ],
         icon: faDna,
@@ -73,7 +81,7 @@ export const timelineData = [
         p: [
             {
                 link: false,
-                text: `I miraculously got accepted to the great University of California, San Diego! I was truly blessed by the year-round sunny weather, amazing Mexican food, and beautiful beaches that were a little too overcrowded on the weekends. As I studied Physiology and Neuroscience, I joined the Kauffman Lab during my fourth year.`,
+                text: `In addition to academics and research, I was blessed by the year-round sunny weather, outstanding Mexican food, and beautiful beaches that were perhaps too overcrowded on the weekends. As I studied Physiology and Neuroscience, I joined the Kauffman Lab during my fourth year.`,
             },
         ],
         icon: faGraduationCap,
@@ -86,7 +94,7 @@ export const timelineData = [
         p: [
             {
                 link: false,
-                text: `I'd say this is the inception of my passion for coding. Thanks Mr. Ferrante for a fun course! I regret not having pursued computer science in college, but I have to trust that everything happens for a reason.`,
+                text: `Although software engineering remained dormant throughout my college, grad school, and early years of work, high school was the inception of my innate passion for coding. Thanks Mr. Ferrante for a fun course! Although I didn't pursue computer science in college, I am grateful to still have the opportunity today to dive into this field.`,
             },
         ],
         icon: faJava,

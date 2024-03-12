@@ -51,7 +51,10 @@ const MyProjects = () => {
             <Row>
                 <Col>
                     <h3 className='mt-3'>Mint Replacement App (in progress)</h3>
-                    <p>Collaborative effort with another developer.</p>
+                    <p>
+                        I am currently working on a project with another developer to create a{' '}
+                        <a href='https://mint.intuit.com/' className='anchor-lightblue' target='_blank' rel='noreferrer'>Mint</a>
+                        {' '}replacement app, since the app is being shut down. This app can track your spending, categorize them, and help your overall budgeting with a seamless user interface.</p>
                 </Col>
             </Row>
         </Container>

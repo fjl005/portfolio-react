@@ -17,7 +17,7 @@ export const introData = [
     },
     {
         title: 'A Lifelong Learner',
-        p: 'Seeking to not only answer problems, but also understand the question and underlying processes completely.',
+        p: 'Seeking to not only solve problems, but also understand the questions and processes completely.',
         img: {
             id: 'learner',
             imgSrc: learner,
@@ -26,7 +26,7 @@ export const introData = [
     },
     {
         title: 'An Effective Communicator',
-        p: 'Articulating my thoughts and questions clearly (online and in person) and listening attentively.',
+        p: 'Articulating my thoughts, comments, and questions clearly (online & in person) and listening attentively.',
         img: {
             id: 'communicator',
             imgSrc: communicator,
