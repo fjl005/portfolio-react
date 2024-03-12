@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e0e9c80e.css",
+    "main.js": "/static/js/main.ba356a74.js",
+    "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
+    "static/media/boredgamesgaloreImage.png": "/static/media/boredgamesgaloreImage.49037e2407ec152ac40e.png",
+    "static/media/banner.png": "/static/media/banner.7f473e4735ac51d5ba47.png",
+    "static/media/fetsyImage.png": "/static/media/fetsyImage.41c58626c610046b2356.png",
+    "static/media/books.gif": "/static/media/books.c35d91fa93f95d504e2b.gif",
+    "static/media/hammerAnvil.gif": "/static/media/hammerAnvil.ebbdb53111f0cdaa764c.gif",
+    "static/media/technologyIcons.png": "/static/media/technologyIcons.cb2763c1b72752283c69.png",
+    "static/media/learner.png": "/static/media/learner.ae4c97542ed298f90b49.png",
+    "static/media/speaker.gif": "/static/media/speaker.74f38d585c9612e51465.gif",
+    "static/media/communicator.png": "/static/media/communicator.e710a1aee26348f1d373.png",
+    "static/media/hardworker.png": "/static/media/hardworker.848ca40ad43942d7c86d.png",
+    "index.html": "/index.html",
+    "main.e0e9c80e.css.map": "/static/css/main.e0e9c80e.css.map",
+    "main.ba356a74.js.map": "/static/js/main.ba356a74.js.map",
+    "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0e9c80e.css",
+    "static/js/main.ba356a74.js"
+  ]
+}
