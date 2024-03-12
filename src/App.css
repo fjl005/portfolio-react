@@ -6,11 +6,17 @@ body {
 .body-background {
     background-color: black;
     color: white;
+    padding-bottom: 1rem;
 }
 
 .anchor-lightblue,
 .strong-lightblue {
     color: rgb(143, 210, 241);
+}
+
+.h1-title {
+    text-align: center;
+    padding-top: 3.25rem;
 }
 
 /* Navbar */

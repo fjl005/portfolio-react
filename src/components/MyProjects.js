@@ -7,7 +7,7 @@ const MyProjects = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-center pt-5' id='myProjects'>My Projects</h1>
+                    <h1 className='h1-title' id='myProjects'>My Projects</h1>
                 </Col>
             </Row>
 

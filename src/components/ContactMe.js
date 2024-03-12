@@ -64,7 +64,7 @@ const ContactMe = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='text-center pt-5' id='contactMe'>Contact Me</h1>
+                    <h1 className='h1-title' id='contactMe'>Contact Me</h1>
                     <p>Thank you for reviewing my portfolio. I'm enthusiastic about contributing to innovative projects and am eager to join a dynamic team as a full-time developer. If you're interested in discussing potential opportunities or have any questions, please feel free to reach out using the form below. I look forward to the possibility of collaborating with you!</p>
                 </Col>
             </Row>
