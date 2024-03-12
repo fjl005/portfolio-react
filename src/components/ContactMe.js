@@ -5,20 +5,41 @@ import emailjs from '@emailjs/browser';
 const ContactMe = () => {
     const form = useRef(null);
 
-    const [personName, setPersonName] = useState('');
-    const [emailInfo, setEmailInfo] = useState('');
-    const [messageBody, setMessageBody] = useState('');
+    const [formData, setFormData] = useState({
+        from_name: '',
+        reply_to: '',
+        message: ''
+    });
+
+    const formFields = [
+        { id: 'from_name', label: 'Name', type: 'text' },
+        { id: 'reply_to', label: 'Email', type: 'text' },
+        { id: 'message', label: 'Message', type: 'textarea', rows: 8 }
+    ];
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
 
     // Need to set up email validation somehow.
-
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('person: ', personName);
-        console.log('message: ', messageBody);
-        console.log('email: ', emailInfo);
-        if (!personName || !messageBody || !emailInfo) {
+        const { from_name, reply_to, message } = formData;
+        if (!from_name || !reply_to || !message) {
             alert('You must fill out all fields.');
         } else {
+            // Email validation
+            const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(reply_to);
+            if (!isValidEmail) {
+                alert('Please enter a valid email address.')
+                return;
+            }
+
+            alert('Form submitted!');
             // Uncomment this code once live. Don't want to use up my 200 monthly emails.
             // emailjs
             //     .sendForm(
@@ -36,11 +57,7 @@ const ContactMe = () => {
             //             console.log('FAILED...', error);
             //         },
             //     );
-            alert('Form submitted!');
-
         }
-        // setPersonName('');
-        // setMessageBody('');
     };
 
     return (
@@ -52,60 +69,31 @@ const ContactMe = () => {
                 </Col>
             </Row>
             <Form innerRef={form} onSubmit={handleSubmit}>
-                <FormGroup>
-                    <Row>
-                        <Col xs='2' className='text-end align-self-center p-0'>
-                            <Label htmlFor='from_name'>Name</Label>
-                        </Col>
-                        <Col xs='8'>
-                            <Input
-                                id='from_name'
-                                name='from_name'
-                                type='text'
-                                value={personName}
-                                onChange={(event) => setPersonName(event.target.value)}
-                            />
-                        </Col>
-                    </Row>
-                </FormGroup>
+                {formFields.map(field => (
+                    <FormGroup key={field.id}>
+                        <Row>
+                            <Col xs='3' sm='2' className='text-end align-self-center p-0'>
+                                <Label htmlFor={field.id} className='mb-0'>
+                                    {field.label}
+                                </Label>
+                            </Col>
+                            <Col xs='9' sm='8'>
+                                <Input
+                                    id={field.id}
+                                    name={field.id}
+                                    type={field.type}
+                                    value={formData[field.id]}
+                                    onChange={handleChange}
+                                    rows={field.rows}
+                                />
+                            </Col>
+                        </Row>
+                    </FormGroup>
+                ))}
 
-                <FormGroup>
-                    <Row>
-                        <Col xs='2' className='text-end align-self-center p-0'>
-                            <Label htmlFor='reply_to'>Email</Label>
-                        </Col>
-                        <Col xs='8'>
-                            <Input
-                                id='reply_to'
-                                name='reply_to'
-                                type='text'
-                                value={emailInfo}
-                                onChange={(event) => setEmailInfo(event.target.value)}
-                            />
-                        </Col>
-                    </Row>
-                </FormGroup>
-
-                <FormGroup>
-                    <Row>
-                        <Col xs='2' className='text-end align-self-center p-0'>
-                            <Label htmlFor='message'>Message</Label>
-                        </Col>
-                        <Col xs='8'>
-                            <Input
-                                id='message'
-                                name='message'
-                                type='textarea'
-                                rows='8'
-                                value={messageBody}
-                                onChange={(event) => setMessageBody(event.target.value)}
-                            />
-                        </Col>
-                    </Row>
-                </FormGroup>
-
-                <Row className='justify-content-center'>
-                    <Col xs='1'>
+                <Row>
+                    <Col xs='3' sm='2'></Col>
+                    <Col xs='9' sm='8' className='submit-button pr-0'>
                         <Button className='bg-primary border-0' type='submit'>Submit</Button>
                     </Col>
                 </Row>

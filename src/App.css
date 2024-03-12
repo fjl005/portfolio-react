@@ -1,3 +1,4 @@
+/* General */
 body {
     font-size: 12px;
 }
@@ -7,25 +8,22 @@ body {
     color: white;
 }
 
+.anchor-lightblue,
+.strong-lightblue {
+    color: rgb(143, 210, 241);
+}
+
+/* Navbar */
 #navbarTop {
     position: fixed;
     width: 100%;
 }
 
-.homepage-banner {
-    width: 100%;
-    max-width: 1350px;
-}
-
-.intro-section-image {
-    width: 10rem;
-    /* height: 25rem; */
-    object-fit: cover;
-}
-
-.anchor-lightblue,
-.strong-lightblue {
-    color: rgb(143, 210, 241);
+#navbarTop .navbar-toggler {
+    background-color: white;
+    height: 30px;
+    font-size: 14px;
+    width: 50px;
 }
 
 .navlink.navlink-white {
@@ -44,6 +42,18 @@ body {
     color: white;
 }
 
+/* Intro Section */
+.homepage-banner {
+    margin-top: 55px;
+    width: 100%;
+    max-width: 1350px;
+}
+
+.intro-section-image {
+    width: 10rem;
+    object-fit: cover;
+}
+
 .intro-h3-height {
     display: flex;
     text-align: center;
@@ -51,6 +61,21 @@ body {
     align-items: center;
 }
 
+/* Projects */
+.projects-buttons-grid {
+    text-align: center;
+}
+
+.frontend-button {
+    margin: auto 1rem;
+}
+
+.submit-button.pr-0 {
+    padding-right: 0;
+    text-align: left;
+}
+
+/* Viewports */
 @media screen and (min-width: 768px) {
     .intro-h3-height {
         min-height: 4.25rem;
@@ -60,5 +85,17 @@ body {
 @media screen and (min-width: 1200px) {
     .intro-h3-height {
         min-height: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects-buttons-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .frontend-button {
+        margin: 1rem auto;
     }
 }

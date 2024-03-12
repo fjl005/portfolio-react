@@ -42,12 +42,13 @@ const MyProjects = () => {
                                 alt={data.title}
                             />
                         </div>
-                        <div className='text-center my-3'>
+
+                        <div className='my-3 projects-buttons-grid'>
                             <a href={data.previewLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-primary border-0'>Preview</Button>
                             </a>
                             <a href={data.frontendLink} target='_blank' rel='noreferrer'>
-                                <Button className='bg-secondary border-0 mx-3'>Frontend Code</Button>
+                                <Button className='bg-secondary border-0 frontend-button'>Frontend Code</Button>
                             </a>
                             <a href={data.backendLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-secondary border-0'>Backend Code</Button>
