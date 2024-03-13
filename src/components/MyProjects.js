@@ -1,6 +1,8 @@
 import React from 'react'
 import { Col, Container, Row, Button } from 'reactstrap';
 import { projectsData } from '../data/projectsData';
+import { faMagnifyingGlass, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const MyProjects = () => {
     return (
@@ -38,20 +40,29 @@ const MyProjects = () => {
                         <div className='text-center'>
                             <img
                                 src={data.img}
-                                style={{ width: '75%' }}
+                                className='project-image'
                                 alt={data.title}
                             />
                         </div>
 
                         <div className='my-3 projects-buttons-grid'>
                             <a href={data.previewLink} target='_blank' rel='noreferrer'>
-                                <Button className='bg-primary border-0'>Preview</Button>
+                                <Button className='bg-primary border-0'>
+                                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                                    <span className='fa-ml-1'>Preview</span>
+                                </Button>
                             </a>
                             <a href={data.frontendLink} target='_blank' rel='noreferrer'>
-                                <Button className='bg-secondary border-0 frontend-button'>Frontend Code</Button>
+                                <Button className='bg-secondary border-0 frontend-button'>
+                                    <FontAwesomeIcon icon={faCodeBranch} />
+                                    <span className='fa-ml-1'>Frontend Code</span>
+                                </Button>
                             </a>
                             <a href={data.backendLink} target='_blank' rel='noreferrer'>
-                                <Button className='bg-secondary border-0'>Backend Code</Button>
+                                <Button className='bg-secondary border-0'>
+                                    <FontAwesomeIcon icon={faCodeBranch} />
+                                    <span className='fa-ml-1'>Backend Code</span>
+                                </Button>
                             </a>
                         </div>
                     </Col>

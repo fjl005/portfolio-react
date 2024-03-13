@@ -4,7 +4,6 @@ import IntroSection from './components/IntroSection';
 import AboutMe from './components/AboutMe';
 import MyProjects from './components/MyProjects';
 import ContactMe from './components/ContactMe';
-import MyFacts from './components/MyFacts';
 
 function App() {
     return (
@@ -13,7 +12,6 @@ function App() {
             <IntroSection />
             <AboutMe />
             <MyProjects />
-            {/* <MyFacts /> */}
             <ContactMe />
         </div>
     );

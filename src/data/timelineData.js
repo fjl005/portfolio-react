@@ -6,11 +6,11 @@ export const timelineData = [
         index: 0,
         date: 'DEC 2022 - PRESENT',
         title: 'Full Stack Developer',
-        subtitle: 'San Diego, CA',
+        subtitle: 'Nucamp, Fetsy, Bored Games Galore',
         p: [
             {
                 link: false,
-                text: `I embarked my web development journey with an introductory HTML, CSS, and JavaScript course. Finding the content captivating, I enrolled in `,
+                text: `Prior to enrolling in `,
             },
             {
                 link: 'https://www.nucamp.co/bootcamp-overview/full-stack-web-mobile-development',
@@ -18,7 +18,7 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: ` and graduated in June with an Honors certificate; the bootcamp emphasized Bootstrap, React, React Native, Node.js, Express, and MongoDB.  After graduating, I studied data structures and algorithms on the side to bolster my computer science knowledge while continuing to build full-stack projects (see Projects section below).`,
+                text: `, I studied HTML, CSS, and JavaScript. Graduating with an Honors certificate, I developed a firm foundation in Bootstrap, React, Node.js, Express, and MongoDB. Afterwards, I studied data structures and algorithms to bolster my computer science knowledge while continuing to build full-stack projects (see Projects section below).`,
             },
         ],
         icon: faReact,
@@ -26,8 +26,8 @@ export const timelineData = [
     {
         index: 1,
         date: 'APR 2020 - PRESENT',
-        title: 'Crown Bioscience',
-        subtitle: 'San Diego, CA',
+        title: 'Project Manager, Study Director',
+        subtitle: 'Crown Bioscience',
         p: [
             {
                 link: false,
@@ -39,7 +39,7 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: ` as a Study Coordinator, I worked across departments to ensure smooth daily operations and plan future initiatives. Progressing to a Study Director, I continued these responsibilities at a higher level and also collaborated closely with various pharmaceutical clients in drafting study protocols and concluding reports. Now as a Project Manager, I focus on revenue milestones and develop documentation to improve operational processes.`,
+                text: ` as a Study Coordinator, I worked across departments to ensure smooth daily operations and plan future initiatives. Progressing to a Study Director, I continued these responsibilities at a higher level and directly collaborated with various pharmaceutical clients in executing their studies. Now as a Project Manager, I focus on achieving revenue milestones accurately and developing documentation to improve operational processes.`,
             },
         ],
         icon: faMicroscope,
@@ -48,7 +48,7 @@ export const timelineData = [
         index: 2,
         date: 'JAN 2019 - MAR 2020',
         title: 'M.S. Biology',
-        subtitle: 'Kauffman Lab (UCSD)',
+        subtitle: 'Kauffman Lab (UC San Diego)',
         p: [
             {
                 link: false,
@@ -60,15 +60,15 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: `, I embraced the opportunity to explore bio research through the BS/MS Program. This included defending a thesis focused on my research in corticosterone's impact on stress-induced inhibition of neuronal activation. `,
+                text: `, I embraced the opportunity to explore bio research through the BS/MS Program. `,
             },
             {
                 link: 'https://escholarship.org/content/qt6q719888/qt6q719888.pdf?t=q89epl',
-                text: `Click here`,
+                text: `I  defended my thesis`,
             },
             {
                 link: false,
-                text: ` to see my Master's Thesis!`,
+                text: `, focusing on my research in corticosterone's impact on stress-induced inhibition of neuronal activation.`,
             },
         ],
         icon: faDna,
@@ -77,7 +77,7 @@ export const timelineData = [
         index: 3,
         date: 'OCT 2014 - DEC 2018',
         title: 'B.S. Biology',
-        subtitle: 'University of California, San Diego (UCSD)',
+        subtitle: 'UC San Diego',
         p: [
             {
                 link: false,

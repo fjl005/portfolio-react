@@ -29,7 +29,7 @@ export const navbarIcons = [
         id: 'fileTooltip',
         text: 'Resume',
         tooltip: 'resume',
-        link: 'https://drive.google.com/file/d/146-XiyNalefLul9IWdTfl2F3wnPYyzGG/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/1BwCYsUPpspTerW5pRfWGvVGCGU_wLl9F/view?usp=sharing',
     },
     {
         icon: faEnvelope,

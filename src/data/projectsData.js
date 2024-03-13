@@ -19,7 +19,7 @@ export const projectsData = [
             },
         ],
         list: [
-            `Employed Passport for secure session management`,
+            `Employed Passport for secure session management and Bcrypt for password hashing`,
             `Developed intuitive React interfaces and handled sensitive data flow via MongoDB`,
             `Incorporated Cloudinary for managing image assets`,
             `Administrator can oversee orders, manage products, and track billing`,
@@ -44,7 +44,7 @@ export const projectsData = [
             },
             {
                 link: false,
-                text: ` website. But because I used the Board Game Atlas (BGA) API, two sections of my project are now unavailable `,
+                text: ` website. But because I used the Board Game Atlas API, two sections of my project are now unavailable `,
             },
             {
                 link: 'https://www.boardgameatlas.com/',

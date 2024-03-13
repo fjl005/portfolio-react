@@ -15,7 +15,7 @@ const Timeline = () => {
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 >
                     <h3 className="vertical-timeline-element-title">{data.title}</h3>
-                    <h4 className="vertical-timeline-element-subtitle">{data.subtitle}</h4>
+                    <h5 className="vertical-timeline-element-subtitle">{data.subtitle}</h5>
                     <p>
                         {data.p.map((pData, idx) => (
                             <span key={idx}>
