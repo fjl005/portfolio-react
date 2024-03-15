@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0e7aa88f.css",
-    "main.js": "/static/js/main.6dd40905.js",
+    "main.js": "/static/js/main.24a57ac7.js",
     "static/js/453.906b0208.chunk.js": "/static/js/453.906b0208.chunk.js",
     "static/media/boredgamesgaloreImage.png": "/static/media/boredgamesgaloreImage.49037e2407ec152ac40e.png",
     "static/media/banner.png": "/static/media/banner.7f473e4735ac51d5ba47.png",
@@ -15,11 +15,11 @@
     "static/media/hardworker.png": "/static/media/hardworker.848ca40ad43942d7c86d.png",
     "index.html": "/index.html",
     "main.0e7aa88f.css.map": "/static/css/main.0e7aa88f.css.map",
-    "main.6dd40905.js.map": "/static/js/main.6dd40905.js.map",
+    "main.24a57ac7.js.map": "/static/js/main.24a57ac7.js.map",
     "453.906b0208.chunk.js.map": "/static/js/453.906b0208.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e7aa88f.css",
-    "static/js/main.6dd40905.js"
+    "static/js/main.24a57ac7.js"
   ]
 }

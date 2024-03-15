@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from 'reactstrap';
 import emailjs from '@emailjs/browser';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 const ContactMe = () => {
     const form = useRef(null);
@@ -10,6 +12,10 @@ const ContactMe = () => {
         reply_to: '',
         message: ''
     });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+
 
     const formFields = [
         { id: 'from_name', label: 'Name', type: 'text' },
@@ -31,6 +37,7 @@ const ContactMe = () => {
         if (!from_name || !reply_to || !message) {
             alert('You must fill out all fields.');
         } else {
+            setIsSubmitting(true);
             // Email validation
             const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(reply_to);
             if (!isValidEmail) {
@@ -48,12 +55,15 @@ const ContactMe = () => {
                 .then(
                     () => {
                         alert('Form submitted!');
+                        setSubmitted(true);
                     },
                     (error) => {
                         alert('Sorry, there was an error in submitting your form.');
                         console.log('FAILED...', error);
                     },
-                );
+                ).finally(() => {
+                    setIsSubmitting(false);
+                });
         }
     };
 
@@ -91,7 +101,24 @@ const ContactMe = () => {
                 <Row>
                     <Col xs='3' sm='2'></Col>
                     <Col xs='9' sm='8' className='submit-button pr-0'>
-                        <Button className='bg-primary border-0' type='submit'>Submit</Button>
+                        {submitted ? (
+                            <Button className='bg-success border-0' disabled={true}>
+                                Submitted
+                            </Button>
+                        ) : (
+                            <Button
+                                className='bg-primary border-0'
+                                type='submit'
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <FontAwesomeIcon icon={faSpinner} spin size='lg' />
+                                        <span style={{ marginLeft: '0.5rem' }}>Submitting...</span>
+                                    </>
+                                ) : 'Submit'}
+                            </Button>
+                        )}
                     </Col>
                 </Row>
             </Form>
