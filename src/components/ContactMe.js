@@ -25,7 +25,6 @@ const ContactMe = () => {
         });
     };
 
-    // Need to set up email validation somehow.
     const handleSubmit = (event) => {
         event.preventDefault();
         const { from_name, reply_to, message } = formData;
@@ -39,24 +38,22 @@ const ContactMe = () => {
                 return;
             }
 
-            alert('Form submitted!');
-            // Uncomment this code once live. Don't want to use up my 200 monthly emails.
-            // emailjs
-            //     .sendForm(
-            //         process.env.REACT_APP_SERVICE_ID,
-            //         process.env.REACT_APP_TEMPLATE_ID,
-            //         form.current,
-            //         { publicKey: process.env.REACT_APP_PUBLIC_KEY, }
-            //     )
-            //     .then(
-            //         () => {
-            //             alert('Form submitted!');
-            //         },
-            //         (error) => {
-            //             alert('Sorry, there was an error in submitting your form.');
-            //             console.log('FAILED...', error);
-            //         },
-            //     );
+            emailjs
+                .sendForm(
+                    process.env.REACT_APP_SERVICE_ID,
+                    process.env.REACT_APP_TEMPLATE_ID,
+                    form.current,
+                    { publicKey: process.env.REACT_APP_PUBLIC_KEY, }
+                )
+                .then(
+                    () => {
+                        alert('Form submitted!');
+                    },
+                    (error) => {
+                        alert('Sorry, there was an error in submitting your form.');
+                        console.log('FAILED...', error);
+                    },
+                );
         }
     };
 
@@ -64,7 +61,7 @@ const ContactMe = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='h1-title' id='contactMe'>Contact Me</h1>
+                    <h1 className='h1-title' id='contact'>Contact Me</h1>
                     <p>Thank you for reviewing my portfolio. I'm enthusiastic about contributing to innovative projects and am eager to join a dynamic team as a full-time developer. If you're interested in discussing potential opportunities or have any questions, please feel free to reach out using the form below!</p>
                 </Col>
             </Row>

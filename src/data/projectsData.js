@@ -3,7 +3,7 @@ import boredgamesgaloreImage from '../img/boredgamesgaloreImage.png';
 
 export const projectsData = [
     {
-        title: 'Fetsy Shop Online',
+        title: 'Fetsy Shop Online (MERN Stack)',
         description: [
             {
                 link: false,
@@ -32,7 +32,7 @@ export const projectsData = [
         backendLink: 'https://github.com/fjl005/ecommerce-backend',
     },
     {
-        title: 'Bored Games Galore',
+        title: 'Bored Games Galore (MERN Stack)',
         description: [
             {
                 link: false,

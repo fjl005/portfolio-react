@@ -25,7 +25,7 @@ body {
     width: 100%;
 }
 
-#navbarTop .navbar-toggler {
+#pagetop .navbar-toggler {
     background-color: white;
     height: 30px;
     font-size: 14px;
@@ -50,7 +50,7 @@ body {
 
 /* Intro Section */
 .homepage-banner {
-    margin-top: 55px;
+    /* margin-top: 55px; */
     width: 100%;
     max-width: 1350px;
     min-height: 200px;

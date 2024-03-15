@@ -30,7 +30,6 @@ const IntroSection = () => {
                 <img
                     src={banner}
                     className='homepage-banner'
-                    id='introSection'
                     alt='home page banner'
                 />
             </div>

@@ -29,7 +29,7 @@ export const navbarIcons = [
         id: 'fileTooltip',
         text: 'Resume',
         tooltip: 'resume',
-        link: 'https://drive.google.com/file/d/1BwCYsUPpspTerW5pRfWGvVGCGU_wLl9F/view?usp=sharing',
+        link: 'https://drive.google.com/file/d/1cgYHZ3FGpnn_FKSMJZ8J22WfvQJWGr2N/view?usp=sharing',
     },
     {
         icon: faEnvelope,
@@ -43,9 +43,9 @@ export const navbarIcons = [
 ];
 
 export const navItems = [
-    { text: 'Back to Top', href: '#navbarTop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
-    { text: 'Skills', href: '#mySkills', className: 'navlink navlink-white' },
-    { text: 'Journey', href: '#myJourney', className: 'navlink navlink-white' },
-    { text: 'Projects', href: '#myProjects', className: 'navlink navlink-white' },
-    { text: 'Contact', href: '#contactMe', className: 'navlink navlink-white' },
+    { text: 'Back to Top', href: '#pagetop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
+    { text: 'Skills', href: '#skills', className: 'navlink navlink-white' },
+    { text: 'Journey', href: '#journey', className: 'navlink navlink-white' },
+    { text: 'Projects', href: '#projects', className: 'navlink navlink-white' },
+    { text: 'Contact', href: '#contact', className: 'navlink navlink-white' },
 ]

@@ -9,7 +9,7 @@ const MyProjects = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='h1-title' id='myProjects'>My Projects</h1>
+                    <h1 className='h1-title' id='projects'>My Projects</h1>
                 </Col>
             </Row>
 
@@ -29,13 +29,11 @@ const MyProjects = () => {
                             ))}
                         </p>
                         {data.list && (
-
                             <ul>
                                 {data.list.map((point, idx) => (
                                     <li key={idx}>{point}</li>
                                 ))}
                             </ul>
-
                         )}
                         <div className='text-center'>
                             <img
@@ -80,6 +78,6 @@ const MyProjects = () => {
             </Row>
         </Container>
     )
-}
+};
 
-export default MyProjects
+export default MyProjects;
