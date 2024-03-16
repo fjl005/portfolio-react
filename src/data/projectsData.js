@@ -22,9 +22,16 @@ export const projectsData = [
             `Employed Passport for secure session management and Bcrypt for password hashing`,
             `Developed intuitive React interfaces and handled sensitive data flow via MongoDB`,
             `Incorporated Cloudinary for managing image assets`,
-            `Administrator can oversee orders, manage products, and track billing`,
-            `Users enjoy features like Cart management, order history, and reviews`,
-            `Public access is limited to viewing products and the shop`,
+            {
+                nested: true,
+                header: `Established various roles of site, such as:`,
+                list: [
+                    `Administrator: oversee orders, manage products, and track billing`,
+                    `User: enjoy features like Cart management, order history, and reviews`,
+                    `General: public access is limited to viewing products and the shop`,
+                ]
+            }
+
         ],
         img: fetsyImage,
         previewLink: 'https://www.fetsyshoponline.com/',

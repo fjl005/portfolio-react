@@ -15,7 +15,7 @@ const MyProjects = () => {
 
             {projectsData.map((data) => (
                 <Row key={data.title}>
-                    <Col>
+                    <Col className='mb-4'>
                         <h3 className='mt-3'>{data.title}</h3>
                         <p>
                             {data.description.map((text, idx) => (
@@ -28,13 +28,7 @@ const MyProjects = () => {
                                 </span>
                             ))}
                         </p>
-                        {data.list && (
-                            <ul>
-                                {data.list.map((point, idx) => (
-                                    <li key={idx}>{point}</li>
-                                ))}
-                            </ul>
-                        )}
+
                         <div className='text-center'>
                             <img
                                 src={data.img}
@@ -63,6 +57,24 @@ const MyProjects = () => {
                                 </Button>
                             </a>
                         </div>
+
+                        <h5>General Concepts</h5>
+                        <ul>
+                            {data.list.map(point => (
+                                <li key={point}>
+                                    {point.nested ? (
+                                        <>
+                                            {point.header}
+                                            <ul>
+                                                {point.list.map(subpoint => (
+                                                    <li key={subpoint}>{subpoint}</li>
+                                                ))}
+                                            </ul>
+                                        </>
+                                    ) : point}
+                                </li>
+                            ))}
+                        </ul>
                     </Col>
                 </Row>
             ))}
@@ -73,7 +85,8 @@ const MyProjects = () => {
                     <p>
                         I am currently working on a project with another developer to create a{' '}
                         <a href='https://mint.intuit.com/' className='anchor-lightblue' target='_blank' rel='noreferrer'>Mint</a>
-                        {' '}replacement app, since the app is being shut down. This app can track your spending, categorize them, and help your overall budgeting with a seamless user interface.</p>
+                        {' '}replacement app, as the app is being shut down. This app can track your spending, categorize them, and guide overall budgeting with a seamless user interface.
+                    </p>
                 </Col>
             </Row>
         </Container>
