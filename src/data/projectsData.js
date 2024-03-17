@@ -39,7 +39,7 @@ export const projectsData = [
         backendLink: 'https://github.com/fjl005/ecommerce-backend',
     },
     {
-        title: 'Bored Games Galore (MERN Stack)',
+        title: 'Board Games Galore (MERN Stack)',
         description: [
             {
                 link: false,
