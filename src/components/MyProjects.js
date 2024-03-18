@@ -9,14 +9,14 @@ const MyProjects = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 className='h1-title' id='projects'>My Projects</h1>
+                    <h1 className='h1-title text-center' id='projects'>My Projects</h1>
                 </Col>
             </Row>
 
             {projectsData.map((data) => (
                 <Row key={data.title}>
                     <Col className='mb-4'>
-                        <h3 className='mt-3'>{data.title}</h3>
+                        <h2 className='mt-3 project-title'>{data.title}</h2>
                         <p>
                             {data.description.map((text, idx) => (
                                 <span key={idx}>
@@ -58,7 +58,7 @@ const MyProjects = () => {
                             </a>
                         </div>
 
-                        <h5>General Concepts</h5>
+                        <h3 className='project-concepts'>General Concepts</h3>
                         <ul>
                             {data.list.map(point => (
                                 <li key={point}>
@@ -81,7 +81,7 @@ const MyProjects = () => {
 
             <Row>
                 <Col>
-                    <h3 className='mt-3'>Mint Replacement App (in progress)</h3>
+                    <h2 className='mt-3'>Mint Replacement App (in progress)</h2>
                     <p>
                         I am currently working on a project with another developer to create a{' '}
                         <a href='https://mint.intuit.com/' className='anchor-lightblue' target='_blank' rel='noreferrer'>Mint</a>

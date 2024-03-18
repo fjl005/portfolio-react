@@ -1,7 +1,7 @@
 const MyJourney = () => {
     return (
         <>
-            <h1 className='h1-title' id='journey'>My Journey</h1>
+            <h1 className='h1-title text-center' id='journey'>My Journey</h1>
             <p>
                 Though I've spent the past few years in the bio industry, my interest in tech traces back to high school, where I first delved into the world of coding during my Java class. I vividly recall the exhilaration of creating a simple Pong game from <a href='https://scratch.mit.edu/' target='_blank' className='anchor-lightblue' rel='noreferrer'>Scratch</a>, MIT's user-friendly coding language, and implementing a program that could pixelate images. For once, I met a school subject that captured my interest. However, my father, with his engineering background, adamantly discouraged me from pursuing this path, citing his own challenging experiences.
             </p>

@@ -66,7 +66,7 @@ const IntroSection = () => {
                                 )}
                             </div>
                             <div className='d-flex flex-column justify-content-between'>
-                                <h3 className='intro-h3-height'>{data.title}</h3>
+                                <h2 className='intro-identity-title'>{data.title}</h2>
                                 <p>{data.p}</p>
                             </div>
                         </Col>

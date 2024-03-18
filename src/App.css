@@ -14,8 +14,11 @@ body {
     color: rgb(143, 210, 241);
 }
 
+h1.text-center {
+    font-size: 2.75rem;
+}
+
 .h1-title {
-    text-align: center;
     padding-top: 3.25rem;
 }
 
@@ -56,16 +59,31 @@ body {
     object-fit: cover;
 }
 
-.intro-h3-height {
+.intro-identity-title {
+    font-size: 1.75rem;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
+/* Timeline */
+.vertical-timeline-element-subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
 /* Projects */
 .projects-buttons-grid {
     text-align: center;
+}
+
+.project-title {
+    font-size: 1.6rem;
+}
+
+.project-concepts {
+    font-size: 1.4rem;
 }
 
 .frontend-button {
@@ -89,7 +107,7 @@ body {
 
 /* Viewports */
 @media screen and (min-width: 768px) {
-    .intro-h3-height {
+    .intro-identity-title {
         min-height: 4.25rem;
     }
 
@@ -99,7 +117,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    .intro-h3-height {
+    .intro-identity-title {
         min-height: auto;
     }
 }
