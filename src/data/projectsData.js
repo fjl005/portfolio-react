@@ -85,7 +85,7 @@ export const projectsData = [
             `Any user can create, update, delete, and view posts`,
         ],
         img: boredgamesgaloreImage,
-        previewLink: 'https://boredgamesgalore.onrender.com/',
+        previewLink: 'https://www.bggalore.com/',
         frontendLink: 'https://github.com/fjl005/boardgamesite',
         backendLink: 'https://github.com/fjl005/boardgamesite-backend',
     }
