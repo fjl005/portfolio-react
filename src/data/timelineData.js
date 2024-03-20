@@ -6,7 +6,7 @@ export const timelineData = [
         index: 0,
         date: 'DEC 2022 - PRESENT',
         title: 'Full Stack Developer',
-        subtitle: 'Nucamp, Fetsy, Bored Games Galore',
+        subtitle: 'Nucamp, Fetsy, Board Games Galore',
         p: [
             {
                 link: false,
