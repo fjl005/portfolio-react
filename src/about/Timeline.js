@@ -20,7 +20,12 @@ const Timeline = () => {
                         {data.p.map((pData, idx) => (
                             <span key={idx}>
                                 {pData.link ? (
-                                    <a href={pData.link} target='_blank' rel='noreferrer' className='anchor-lightblue'>
+                                    <a
+                                        href={pData.link}
+                                        target={`${pData.internalLink ? '' : '_blank'}`}
+                                        rel={`${pData.internalLink ? '' : 'noreferrer'}`}
+                                        className='anchor-lightblue'
+                                    >
                                         {pData.text}
                                     </a>
                                 ) : pData.text}

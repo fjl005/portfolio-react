@@ -18,8 +18,13 @@ export const timelineData = [
             },
             {
                 link: false,
-                text: `, I studied HTML, CSS, and JavaScript. Graduating with an Honors certificate, I developed a firm foundation in Bootstrap, React, Node.js, Express, and MongoDB. Afterwards, I studied data structures and algorithms to bolster my computer science knowledge while continuing to build full-stack projects (see Projects section below).`,
+                text: `, I studied HTML, CSS, and JavaScript. Graduating with an Honors certificate, I developed a firm foundation in Bootstrap, React, Node.js, Express, and MongoDB. Afterwards, I studied data structures and algorithms to bolster my computer science knowledge while continuing to build full-stack projects, which you can find below `,
             },
+            {
+                link: '#projects',
+                internalLink: true,
+                text: `in my Projects Section.`
+            }
         ],
         icon: faReact,
     },
