@@ -43,9 +43,11 @@ export const navbarIcons = [
 ];
 
 export const navItems = [
-    { text: 'Back to Top', href: '#pagetop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
-    { text: 'Skills', href: '#skills', className: 'navlink navlink-white' },
-    { text: 'Journey', href: '#journey', className: 'navlink navlink-white' },
-    { text: 'Projects', href: '#projects', className: 'navlink navlink-white' },
-    { text: 'Contact', href: '#contact', className: 'navlink navlink-white' },
+    // { text: 'Back to Top', href: '#pagetop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
+    { text: 'Home', href: '/', className: 'navlink-white' },
+    { text: 'About Me', href: 'aboutme', className: 'navlink-white' },
+    // { text: 'Skills', href: '#skills', className: 'navlink-white' },
+    // { text: 'Journey', href: '#journey', className: 'navlink-white' },
+    { text: 'Projects', href: 'projects', className: 'navlink-white' },
+    { text: 'Contact', href: '#contactme', className: 'navlink-white' },
 ]

@@ -10,6 +10,7 @@ import {
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { navbarIcons, navItems } from '../data/navbarData';
+import { Link } from 'react-router-dom';
 
 const NavbarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -56,12 +57,10 @@ const NavbarApp = () => {
                 <Nav className="ml-auto" navbar>
                     {navItems.map((item, index) => (
                         <NavItem key={index}>
-                            <NavLink
-                                href={item.href}
-                                className={item.className}
-                                onClick={item.onClick}
-                            >
-                                {item.text}
+                            <NavLink>
+                                <Link to={item.href} className={item.className}>
+                                    {item.text}
+                                </Link>
                             </NavLink>
                         </NavItem>
                     ))}

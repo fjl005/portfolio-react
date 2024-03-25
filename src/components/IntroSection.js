@@ -73,6 +73,7 @@ const IntroSection = () => {
                     ))}
                 </Row>
             </Container>
+
         </>
     )
 }

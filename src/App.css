@@ -26,8 +26,9 @@ h1.text-center {
     width: 50px;
 }
 
-.navlink.navlink-white {
+.navlink-white {
     color: white;
+    text-decoration: none;
 }
 
 .navlink-cursor {
