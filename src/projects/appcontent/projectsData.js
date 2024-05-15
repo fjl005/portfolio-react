@@ -1,5 +1,5 @@
-import fetsyImage from '../img/fetsyImage.png';
-import boredgamesgaloreImage from '../img/boredgamesgaloreImage.png';
+import fetsyImage from '../../img/fetsyImage.png';
+import boredgamesgaloreImage from '../../img/boredgamesgaloreImage.png';
 
 export const projectsData = [
     {

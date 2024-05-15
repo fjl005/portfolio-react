@@ -4,6 +4,7 @@ import IntroSection from './components/IntroSection';
 import AboutMe from './components/AboutMe';
 import MyProjects from './components/MyProjects';
 import ContactMe from './components/ContactMe';
+import Projects from './projects';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <NavbarApp />
             <IntroSection />
             <AboutMe />
+            <Projects />
             <MyProjects />
             <ContactMe />
         </div>
