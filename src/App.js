@@ -1,5 +1,5 @@
 import './App.css';
-import NavbarApp from './components/NavbarApp';
+import NavbarApp from './components/navbar';
 import IntroSection from './components/IntroSection';
 import ContactMe from './components/ContactMe';
 import Projects from './components/projects';

@@ -9,20 +9,15 @@ import {
 } from 'reactstrap';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { navbarIcons, navItems } from '../data/navbarData';
+import { NAVBAR_ICONS, NAV_ITEMS, COPIED_EMAIL, tooltipInitial } from './app-content/navbarData';
 
 const NavbarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [copiedEmail, setCopiedEmail] = useState(false);
+    const [showEmailCopied, setShowEmailCopied] = useState(false);
     const [timeoutId, setTimeoutId] = useState(null);
-    const toggleNavbar = () => setIsOpen(prev => !prev);
+    const [tooltips, setTooltips] = useState(tooltipInitial);
 
-    const [tooltips, setTooltips] = useState({
-        linkedin: false,
-        github: false,
-        resume: false,
-        email: false
-    });
+    const toggleNavbar = () => setIsOpen(prev => !prev);
 
     const toggleTooltip = (tooltip) => {
         setTooltips({ ...tooltips, [tooltip]: !tooltips[tooltip] });
@@ -35,11 +30,11 @@ const NavbarApp = () => {
                 setTimeoutId(null);
             }
 
-            setCopiedEmail(true);
-            await navigator.clipboard.writeText('frank.jk.lee96@gmail.com');
+            setShowEmailCopied(true);
+            await navigator.clipboard.writeText(COPIED_EMAIL);
 
             const id = setTimeout(() => {
-                setCopiedEmail(false);
+                setShowEmailCopied(false);
                 setTimeoutId(null);
             }, 2000);
 
@@ -54,7 +49,7 @@ const NavbarApp = () => {
             <NavbarToggler onClick={toggleNavbar} className='navbar-toggler' />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
-                    {navItems.map((item, index) => (
+                    {NAV_ITEMS.map((item, index) => (
                         <NavItem key={index}>
                             <NavLink
                                 href={item.href}
@@ -69,7 +64,7 @@ const NavbarApp = () => {
             </Collapse>
             <Nav className="mr-auto" navbar>
                 <div className='d-flex'>
-                    {navbarIcons.map((icon, index) => (
+                    {NAVBAR_ICONS.map((icon, index) => (
                         <NavItem
                             key={index}
                             id={icon.id}
@@ -92,7 +87,7 @@ const NavbarApp = () => {
                                     target={icon.id}
                                     toggle={() => toggleTooltip(icon.tooltip)}
                                 >
-                                    {copiedEmail ? icon.copied : icon.text}
+                                    {showEmailCopied ? icon.copied : icon.text}
                                 </Tooltip>
                             </NavLink>
                         </NavItem>
