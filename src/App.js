@@ -4,13 +4,18 @@ import IntroSection from './components/IntroSection';
 import ContactMe from './components/ContactMe';
 import Projects from './projects';
 import About from './about';
+import Skills from './skills';
+import Journey from './journey';
+import Timeline from './timeline';
 
 function App() {
     return (
         <div className='body-background'>
             <NavbarApp />
             <IntroSection />
-            <About />
+            <Skills />
+            <Journey />
+            <Timeline />
             <Projects />
             <ContactMe />
         </div>

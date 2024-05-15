@@ -1,5 +1,6 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { timelineData } from '../../timeline/app-content/timelineData';
+import 'react-vertical-timeline-component/style.min.css';
+import { timelineData } from './app-content/timelineData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Timeline = () => {
@@ -35,6 +36,7 @@ const Timeline = () => {
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
+
     )
 }
 
