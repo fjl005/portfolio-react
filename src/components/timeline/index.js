@@ -36,7 +36,6 @@ const Timeline = () => {
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
-
     )
 }
 

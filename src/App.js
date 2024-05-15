@@ -2,11 +2,10 @@ import './App.css';
 import NavbarApp from './components/NavbarApp';
 import IntroSection from './components/IntroSection';
 import ContactMe from './components/ContactMe';
-import Projects from './projects';
-import About from './about';
-import Skills from './skills';
-import Journey from './journey';
-import Timeline from './timeline';
+import Projects from './components/projects';
+import Skills from './components/skills';
+import Journey from './components/journey';
+import Timeline from './components/timeline';
 
 function App() {
     return (
