@@ -3,6 +3,7 @@ import { Col, Container, Row, Button } from 'reactstrap';
 import { projectsData } from '../data/projectsData';
 import { faMagnifyingGlass, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import fetsyImage from '../img/fetsyImage.png';
 
 const MyProjects = () => {
     return (
@@ -87,6 +88,48 @@ const MyProjects = () => {
                         <a href='https://mint.intuit.com/' className='anchor-lightblue' target='_blank' rel='noreferrer'>Mint</a>
                         {' '}replacement app, as the app is being shut down. This app can track your spending, categorize them, and guide overall budgeting with a seamless user interface.
                     </p>
+                </Col>
+            </Row>
+
+            {/* <Row>
+                <Col className='d-flex flex-column justify-content-center align-items-center'>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h2>Fetsy Shop Online</h2>
+                                <img src={fetsyImage} alt='fetsy' style={{ width: '90%', objectFit: 'contain' }} />
+                            </div>
+                            <div class="flip-card-back">
+                                <h1>John Doe</h1>
+                            </div>
+                        </div>
+                    </div>
+                </Col>
+            </Row> */}
+
+            <Row>
+                <Col xs='12' className='text-center'>
+                    <h2>Fetsy Shop Online (MERN)</h2>
+                    <div className='projects-image-container'>
+                        <img src={fetsyImage} alt='fetsy' className='w-100' />
+                        <div className='projects-image-overlay'>
+                            <p>Stuff</p>
+                            <Button>Learn More</Button>
+                        </div>
+                    </div>
+
+                    <Button className='bg-primary border-0'>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        <span className='fa-ml-1'>Preview</span>
+                    </Button>
+                    <Button className='bg-secondary border-0 frontend-button'>
+                        <FontAwesomeIcon icon={faCodeBranch} />
+                        <span className='fa-ml-1'>Frontend Code</span>
+                    </Button>
+                    <Button className='bg-secondary border-0'>
+                        <FontAwesomeIcon icon={faCodeBranch} />
+                        <span className='fa-ml-1'>Backend Code</span>
+                    </Button>
                 </Col>
             </Row>
         </Container>
