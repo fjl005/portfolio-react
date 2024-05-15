@@ -4,6 +4,10 @@ export const headerInfo = {
         id: 'about',
         title: 'About Me',
     },
+    intro: {
+        id: 'intro',
+        title: 'I Identify as...'
+    },
     journey: {
         id: 'journey',
         title: 'My Journey',
