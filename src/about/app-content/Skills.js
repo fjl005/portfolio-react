@@ -1,6 +1,6 @@
-import technologyIcons from '../img/technologyIcons.png';
+import technologyIcons from '../../img/technologyIcons.png';
 
-const MySkills = () => {
+const Skills = () => {
     return (
         <>
             <h1 className='h1-title text-center' id='skills'>My Skills</h1>
@@ -17,4 +17,4 @@ const MySkills = () => {
     )
 }
 
-export default MySkills;
+export default Skills;

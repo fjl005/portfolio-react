@@ -1,4 +1,4 @@
-const MyJourney = () => {
+const Journey = () => {
     return (
         <>
             <h1 className='h1-title text-center' id='journey'>My Journey</h1>
@@ -21,4 +21,4 @@ const MyJourney = () => {
     )
 }
 
-export default MyJourney;
+export default Journey;

@@ -1,5 +1,5 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { timelineData } from '../data/timelineData';
+import { timelineData } from '../../data/timelineData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Timeline = () => {
