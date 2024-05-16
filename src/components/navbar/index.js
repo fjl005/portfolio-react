@@ -46,7 +46,7 @@ const NavbarApp = () => {
     };
 
     return (
-        <Navbar color="black" light expand="md" sticky='top' id='pagetop'>
+        <Navbar color="black" light expand="md" sticky='top' id='pagetop' style={{ padding: '1rem 0' }}>
             <NavbarToggler onClick={toggleNavbar} className='navbar-toggler' />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
