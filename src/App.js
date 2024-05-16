@@ -7,19 +7,16 @@ import Journey from './components/journey';
 import Timeline from './components/timeline';
 import Banner from './components/homepage';
 import Contact from './components/contact';
+import HomePage from './components/homepage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
     return (
-        <div className='body-background'>
-            <NavbarApp />
-            <Banner />
-            <Intro />
-            <Skills />
-            <Journey />
-            <Timeline />
-            <Projects />
-            <Contact />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
