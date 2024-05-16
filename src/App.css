@@ -30,13 +30,18 @@ h1.text-center {
     width: 50px;
 }
 
+.navlink {
+    margin: auto 0.5rem;
+    text-decoration: none;
+}
+
 .navlink.navlink-white {
     color: white;
 }
 
-.navlink-cursor {
+/* .navlink-cursor {
     cursor: pointer;
-}
+} */
 
 .navlink.navlink-white:hover {
     color: rgb(143, 210, 241);

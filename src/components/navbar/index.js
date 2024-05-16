@@ -4,9 +4,10 @@ import {
     Collapse,
     Nav,
     NavItem,
-    NavLink,
+    // NavLink,
     Tooltip,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NAVBAR_ICONS, NAV_ITEMS, COPIED_EMAIL, tooltipInitial } from './app-content/navbarData';
@@ -52,7 +53,8 @@ const NavbarApp = () => {
                     {NAV_ITEMS.map((item, index) => (
                         <NavItem key={index}>
                             <NavLink
-                                href={item.href}
+                                // href={item.href}
+                                to={item.to}
                                 className={item.className}
                                 onClick={item.onClick}
                             >

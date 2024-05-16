@@ -41,11 +41,12 @@ export const NAVBAR_ICONS = [
 ];
 
 export const NAV_ITEMS = [
-    { text: 'Back to Top', href: '#pagetop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
-    { text: 'Skills', href: '#skills', className: 'navlink navlink-white' },
-    { text: 'Journey', href: '#journey', className: 'navlink navlink-white' },
-    { text: 'Projects', href: '#projects', className: 'navlink navlink-white' },
-    { text: 'Contact', href: '#contact', className: 'navlink navlink-white' },
+    { text: 'Home', to: '/', className: 'navlink navlink-white', },
+    // { text: 'Back to Top', href: '#pagetop', className: 'navlink navlink-white navlink-cursor', onClick: scrollToTop, },
+    // { text: 'Skills', href: '#skills', className: 'navlink navlink-white' },
+    // { text: 'Journey', href: '#journey', className: 'navlink navlink-white navlink-cursor' },
+    { text: 'Projects', to: '/projects', className: 'navlink navlink-white' },
+    // { text: 'Contact', href: '#contact', className: 'navlink navlink-white' },
 ];
 
 export const tooltipInitial = {
