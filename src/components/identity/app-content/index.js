@@ -3,21 +3,21 @@ import { Row, Col } from 'reactstrap';
 import { introData, initialHovered } from './identityData';
 
 const AppContent = () => {
-    const [isHovered, setIsHovered] = useState(initialHovered);
+    // const [isHovered, setIsHovered] = useState(initialHovered);
 
-    const handleMouseEnter = (imageId) => {
-        setIsHovered(prev => ({
-            ...prev,
-            [imageId]: true,
-        }));
-    };
+    // const handleMouseEnter = (imageId) => {
+    //     setIsHovered(prev => ({
+    //         ...prev,
+    //         [imageId]: true,
+    //     }));
+    // };
 
-    const handleMouseLeave = (imageId) => {
-        setIsHovered(prev => ({
-            ...prev,
-            [imageId]: false,
-        }));
-    };
+    // const handleMouseLeave = (imageId) => {
+    //     setIsHovered(prev => ({
+    //         ...prev,
+    //         [imageId]: false,
+    //     }));
+    // };
 
     return (
         <>
@@ -28,7 +28,12 @@ const AppContent = () => {
                         md='4'
                         className='text-center'
                     >
-                        <div
+                        <img
+                            src={data.img.imgSrc}
+                            className='intro-section-image'
+                            alt={data.img.id}
+                        />
+                        {/* <div
                             onMouseEnter={() => handleMouseEnter(data.img.id)}
                             onMouseLeave={() => handleMouseLeave(data.img.id)}
                         >
@@ -45,7 +50,7 @@ const AppContent = () => {
                                     alt={data.img.id}
                                 />
                             )}
-                        </div>
+                        </div> */}
                         <div className='d-flex flex-column justify-content-between'>
                             <h2 className='intro-identity-title'>{data.title}</h2>
                             <p>{data.p}</p>

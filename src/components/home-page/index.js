@@ -1,6 +1,6 @@
 import React from 'react'
 import PageContent from './page-content';
-import Page from '../shared/page/Page';
+import Page from '../shared/page';
 
 const HomePage = () => {
     return (

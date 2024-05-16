@@ -3,6 +3,7 @@ import { Col, Row, Button, Container } from 'reactstrap';
 import { projectsData } from './projectsData';
 import { faMagnifyingGlass, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ProjectTemplate from './ProjectTemplate';
 
 const PageContent = () => {
     return (
@@ -12,6 +13,7 @@ const PageContent = () => {
                     <h1 className='text-center'>My Projects</h1>
                 </Col>
             </Row>
+            <ProjectTemplate />
             {projectsData.map((data) => (
                 <Row key={data.title}>
                     <Col className='mb-4'>
