@@ -7,7 +7,6 @@ const Section = ({ headerInfo, appContent }) => {
             <Row>
                 <Col>
                     <h1 className='h1-title text-center' id={headerInfo.id}>{headerInfo.title}</h1>
-
                 </Col>
             </Row>
             {appContent}

@@ -1,9 +1,9 @@
 import React from 'react'
-import Section from '../shared/Section'
-import { headerInfo } from '../shared/headerInfo'
+import Section from '../shared/section/Section'
+import { headerInfo } from '../shared/section/headerInfo'
 import AppContent from './app-content'
 
-const Intro = () => {
+const Identity = () => {
     return (
         <Section
             headerInfo={headerInfo.intro}
@@ -12,4 +12,4 @@ const Intro = () => {
     )
 }
 
-export default Intro;
+export default Identity;

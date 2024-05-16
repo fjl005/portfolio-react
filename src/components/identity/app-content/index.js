@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'reactstrap';
-import { introData, initialHovered } from './introData';
+import { introData, initialHovered } from './identityData';
 
 const AppContent = () => {
     const [isHovered, setIsHovered] = useState(initialHovered);

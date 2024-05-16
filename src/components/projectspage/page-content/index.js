@@ -1,12 +1,17 @@
 import React from 'react'
-import { Col, Row, Button } from 'reactstrap';
+import { Col, Row, Button, Container } from 'reactstrap';
 import { projectsData } from './projectsData';
 import { faMagnifyingGlass, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const AppContent = () => {
+const PageContent = () => {
     return (
-        <>
+        <Container>
+            <Row>
+                <Col>
+                    <h1 className='text-center'>My Projects</h1>
+                </Col>
+            </Row>
             {projectsData.map((data) => (
                 <Row key={data.title}>
                     <Col className='mb-4'>
@@ -83,8 +88,8 @@ const AppContent = () => {
                     </p>
                 </Col>
             </Row>
-        </>
+        </Container>
     )
 };
 
-export default AppContent;
+export default PageContent;
