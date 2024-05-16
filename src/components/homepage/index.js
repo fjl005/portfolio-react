@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../../img/banner.png';
+import Banner from '../banner';
 import NavbarApp from '../navbar';
 import Skills from '../skills';
 import Journey from '../journey';
@@ -10,13 +10,7 @@ const HomePage = () => {
     return (
         <div className='body-background'>
             <NavbarApp />
-            <div className='d-flex justify-content-center'>
-                <img
-                    src={banner}
-                    className='homepage-banner'
-                    alt='home page banner'
-                />
-            </div>
+            <Banner />
             <Skills />
             <Journey />
             <Timeline />
