@@ -34,9 +34,3 @@ export const introData = [
         },
     },
 ];
-
-export const initialHovered = {
-    [introData[0].img.id]: false,
-    [introData[1].img.id]: false,
-    [introData[2].img.id]: false,
-};
