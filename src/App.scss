@@ -12,17 +12,3 @@ h1.text-center {
 .h1-title {
     padding-top: 2rem;
 }
-
-/* Viewports */
-
-@media screen and (max-width: 576px) {
-    .projects-buttons-grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .frontend-button {
-        margin: 0.5rem auto;
-    }
-}
