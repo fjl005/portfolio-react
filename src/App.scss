@@ -14,21 +14,6 @@ h1.text-center {
 }
 
 /* Viewports */
-@media screen and (min-width: 768px) {
-    .intro-identity-title {
-        min-height: 4.25rem;
-    }
-
-    .intro-section-image {
-        width: 10rem;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .intro-identity-title {
-        min-height: auto;
-    }
-}
 
 @media screen and (max-width: 576px) {
     .projects-buttons-grid {
@@ -39,11 +24,5 @@ h1.text-center {
 
     .frontend-button {
         margin: 0.5rem auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .intro-section-image {
-        width: 6rem;
     }
 }

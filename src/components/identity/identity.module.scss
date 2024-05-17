@@ -1,5 +1,4 @@
 .identity-image {
-    width: 40%;
     height: auto;
     object-fit: cover;
 }
@@ -10,4 +9,20 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .identity-title {
+        min-height: 4rem;
+    }
+}
+
+.identity-image {
+    width: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+    .identity-image {
+        width: 5rem;
+    }
 }

@@ -1,12 +1,12 @@
 import { faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
+// const scrollToTop = () => {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// };
 
 export const NAVBAR_ICONS = [
     {
