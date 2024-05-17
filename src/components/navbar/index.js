@@ -4,7 +4,7 @@ import {
     Collapse,
     Nav,
     NavItem,
-    // NavLink,
+    NavLink as RsNavLink,
     Tooltip,
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
@@ -73,7 +73,7 @@ const NavbarApp = () => {
                             className='mx-3'
                             onClick={icon.id === 'emailTooltip' ? copyEmail : () => null}
                         >
-                            <NavLink
+                            <RsNavLink
                                 href={icon.link}
                                 target="_blank"
                             >
@@ -90,7 +90,7 @@ const NavbarApp = () => {
                                 >
                                     {showEmailCopied ? icon.copied : icon.text}
                                 </Tooltip>
-                            </NavLink>
+                            </RsNavLink>
                         </NavItem>
                     ))}
                 </div>
