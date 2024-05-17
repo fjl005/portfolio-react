@@ -6,6 +6,7 @@ const AppContent = () => {
             <p><strong className='strong-lightblue'>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap, React, Responsive Web Design, Cloudinary.</p>
             <p><strong className='strong-lightblue'>Backend:</strong> Node.JS, Express, MongoDB (NoSQL), Passport, Session. </p>
             <p><strong className='strong-lightblue'>General:</strong> REST API, Version Control (Git/Github), Witty One-Liners.</p>
+            <p><strong className='strong-lightblue'>Currently Mastering:</strong> TypeScript, SCSS.</p>
 
             <img
                 src={technologyIcons}
