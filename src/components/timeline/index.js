@@ -2,6 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import { timelineData } from './app-content/timelineData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './timeline.module.scss';
 
 const Timeline = () => {
     return (
@@ -16,7 +17,7 @@ const Timeline = () => {
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 >
                     <h3 className="vertical-timeline-element-title h2-timeline">{data.title}</h3>
-                    <h4 className="vertical-timeline-element-subtitle">{data.subtitle}</h4>
+                    <h4 className={styles['vertical-timeline-element-subtitle']}>{data.subtitle}</h4>
                     <p>
                         {data.p.map((pData, idx) => (
                             <span key={idx}>
