@@ -47,7 +47,7 @@ const NavbarApp = () => {
     };
 
     return (
-        <Navbar color="black" light expand="md" sticky='top' className={styles['navbar']}>
+        <Navbar color="black" light expand="md" className={styles['navbar']}>
             <NavbarToggler onClick={toggleNavbar} className={styles['navbar-toggler']} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>

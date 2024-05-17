@@ -4,6 +4,7 @@ import { projectsData } from './projectsData';
 import { faMagnifyingGlass, faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ProjectTemplate from './ProjectTemplate';
+import styles from '../projects.module.scss';
 
 const PageContent = () => {
     return (
@@ -17,12 +18,17 @@ const PageContent = () => {
             {projectsData.map((data) => (
                 <Row key={data.title}>
                     <Col className='mb-4'>
-                        <h2 className='mt-3 project-title'>{data.title}</h2>
+                        <h2 className={`mt-3 ${styles['project-title']}`}>{data.title}</h2>
                         <p>
                             {data.description.map((text, idx) => (
                                 <span key={idx}>
                                     {text.link ? (
-                                        <a href={text.link} target='_blank' className='anchor-lightblue' rel='noreferrer'>
+                                        <a
+                                            href={text.link}
+                                            target='_blank'
+                                            className='anchor-lightblue'
+                                            rel='noreferrer'
+                                        >
                                             {text.text}
                                         </a>
                                     ) : text.text}
@@ -33,33 +39,33 @@ const PageContent = () => {
                         <div className='text-center'>
                             <img
                                 src={data.img}
-                                className='project-image'
+                                className={styles['project-image']}
                                 alt={data.title}
                             />
                         </div>
 
-                        <div className='my-3 projects-buttons-grid'>
+                        <div className={`my-3 ${styles['projects-buttons-grid']}`}>
                             <a href={data.previewLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-primary border-0'>
                                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                                    <span className='fa-ml-1'>Preview</span>
+                                    <span className={styles['fa-ml-1']}>Preview</span>
                                 </Button>
                             </a>
                             <a href={data.frontendLink} target='_blank' rel='noreferrer'>
-                                <Button className='bg-secondary border-0 frontend-button'>
+                                <Button className={`bg-secondary border-0 ${styles['frontend-button']}`}>
                                     <FontAwesomeIcon icon={faCodeBranch} />
-                                    <span className='fa-ml-1'>Frontend Code</span>
+                                    <span className={styles['fa-ml-1']}>Frontend Code</span>
                                 </Button>
                             </a>
                             <a href={data.backendLink} target='_blank' rel='noreferrer'>
                                 <Button className='bg-secondary border-0'>
                                     <FontAwesomeIcon icon={faCodeBranch} />
-                                    <span className='fa-ml-1'>Backend Code</span>
+                                    <span className={styles['fa-ml-1']}>Backend Code</span>
                                 </Button>
                             </a>
                         </div>
 
-                        <h3 className='project-concepts'>General Concepts</h3>
+                        <h3 className={styles['project-concepts']}>General Concepts</h3>
                         <ul>
                             {data.list.map(point => (
                                 <li key={point}>
