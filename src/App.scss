@@ -13,35 +13,6 @@ h1.text-center {
     padding-top: 2rem;
 }
 
-/* Navbar */
-#pagetop .navbar-toggler {
-    background-color: white;
-    height: 30px;
-    font-size: 14px;
-    width: 50px;
-}
-
-.navlink {
-    margin: auto 0.5rem;
-    text-decoration: none;
-}
-
-.navlink.navlink-white {
-    color: $secondary-color;
-}
-
-/* .navlink-cursor {
-    cursor: pointer;
-} */
-
-.navlink.navlink-white:hover {
-    color: $primary-color;
-}
-
-.navlink.navlink-white:active {
-    color: $secondary-color;
-}
-
 /* Intro Section */
 .homepage-banner {
     /* margin-top: 55px; */

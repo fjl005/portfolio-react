@@ -11,6 +11,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NAVBAR_ICONS, NAV_ITEMS, COPIED_EMAIL, tooltipInitial } from './app-content/navbarData';
+import styles from './navbar.module.scss';
 
 const NavbarApp = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -46,17 +47,16 @@ const NavbarApp = () => {
     };
 
     return (
-        <Navbar color="black" light expand="md" sticky='top' id='pagetop' style={{ padding: '1rem 0' }}>
-            <NavbarToggler onClick={toggleNavbar} className='navbar-toggler' />
+        <Navbar color="black" light expand="md" sticky='top' className={styles['navbar']}>
+            <NavbarToggler onClick={toggleNavbar} className={styles['navbar-toggler']} />
             <Collapse isOpen={isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                     {NAV_ITEMS.map((item, index) => (
                         <NavItem key={index}>
                             <NavLink
-                                // href={item.href}
                                 to={item.to}
-                                className={item.className}
                                 onClick={item.onClick}
+                                className={`${styles.navlink} ${styles['navlink-white']} ${styles['navlink-left']}`}
                             >
                                 {item.text}
                             </NavLink>
@@ -76,12 +76,11 @@ const NavbarApp = () => {
                             <NavLink
                                 href={icon.link}
                                 target="_blank"
-                                style={{ cursor: icon.cursor }}
                             >
                                 <FontAwesomeIcon
                                     icon={icon.icon}
                                     size='xl'
-                                    className='navlink navlink-white'
+                                    className={`${styles.navlink} ${styles['navlink-white']}`}
                                 />
                                 <Tooltip
                                     placement="bottom"

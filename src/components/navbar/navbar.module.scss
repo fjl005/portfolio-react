@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar .navbar-toggler {
+    background-color: $secondary-color;
+    height: 30px;
+    font-size: 14px;
+    width: 50px;
+}
+
+.navlink-left {
+    margin: auto 0.5rem;
+}
+
+.navlink {
+    text-decoration: none;
+}
+
+.navlink.navlink-white {
+    color: $secondary-color;
+}
+
+.navlink.navlink-white:hover {
+    color: $primary-color;
+}
+
+.navlink.navlink-white:active {
+    color: $secondary-color;
+}
