@@ -1,12 +1,16 @@
 import React from 'react';
 import { Button } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const ProjectOverlay = () => {
     return (
         <div style={styles.overlay}>
             <div style={styles.topSection}>
                 <h2 style={styles.text}>A MERN-stack e-commerce shop modeled after my Etsy Shop.</h2>
-                <Button style={styles.button}>Learn More</Button>
+                <Button style={styles.button}>
+                    <NavLink to='/projects/fetsy' style={{ textDecoration: 'none', color: 'white' }}>
+                        Learn More
+                    </NavLink></Button>
             </div>
             <div style={styles.bottomSection}>
                 <Button className='bg-primary btn-outline-primary' style={styles.button}>View Live</Button>
