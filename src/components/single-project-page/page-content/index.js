@@ -15,6 +15,30 @@ const PageContent = () => {
         }
     }, []);
 
+    const AnchorComponent = (props) => (
+        <a className='anchor-lightblue' {...props}>
+            {props.children}
+        </a>
+    );
+
+    const H3Component = (props) => (
+        <h3 style={{ marginTop: '2rem' }} {...props}>
+            {props.children}
+        </h3>
+    );
+
+    const ImageComponent = (props) => (
+        <img style={{ width: '100%', maxWidth: '1000px' }} {...props} alt='alt'>
+            {props.children}
+        </img>
+    );
+
+    const components = {
+        a: AnchorComponent,
+        h3: H3Component,
+        img: ImageComponent,
+    };
+
     return (
         <Container>
             {projectExists ? (
@@ -32,7 +56,7 @@ const PageContent = () => {
                     </Row>
                     <Row>
                         <Col xs='12'>
-                            <ReactMarkdown children={projectInfo.markdownContent} />
+                            <ReactMarkdown components={components} children={projectInfo.markdownContent} />
                             <h3>Background</h3>
                             <p>Hello</p>
                             <ReactMarkdown>## Hello, *world*!</ReactMarkdown>
