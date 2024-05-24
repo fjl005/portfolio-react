@@ -11,7 +11,7 @@ export const projectInfo = {
     markdownContent: `
 ### Introduction
 Rewinding back to June of 2023, there were two key components of my life that intertwined into this project:
-* I ran an [Etsy Shop](https://www.digiwitz.etsy.com) (and still do today), selling digital cards and templates of various types.
+* I ran an [Etsy Shop](https://www.etsy.com/shop/DigiWitz) (and still do today), selling digital cards and templates of various types.
 * I finished up my coding bootcamp, and wanted to further my knowledge of user authentication, administrator authorization, and manipulation of data from a data storage via Node.JS, Express, and MongoDB.
 
 I then thought to myself, *“wouldn’t it be a great idea to implement what I’ve learned from NuCamp to recreate my own online shop apart from Etsy?”*

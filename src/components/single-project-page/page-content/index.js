@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import { useParams } from 'react-router-dom';
 import { allProjects } from './project-info/allProjects';
 import { projectInfo } from './project-info/fetsy';
-import ReactMarkdown from 'react-markdown'
+import MarkdownContent from './markdown';
 
 const PageContent = () => {
     const { projectName } = useParams();
@@ -13,31 +13,7 @@ const PageContent = () => {
         if (!allProjects[projectName]) {
             setProjectExists(false);
         }
-    }, []);
-
-    const AnchorComponent = (props) => (
-        <a className='anchor-lightblue' {...props}>
-            {props.children}
-        </a>
-    );
-
-    const H3Component = (props) => (
-        <h3 style={{ marginTop: '2rem' }} {...props}>
-            {props.children}
-        </h3>
-    );
-
-    const ImageComponent = (props) => (
-        <img style={{ width: '100%', maxWidth: '1000px' }} {...props} alt='alt'>
-            {props.children}
-        </img>
-    );
-
-    const components = {
-        a: AnchorComponent,
-        h3: H3Component,
-        img: ImageComponent,
-    };
+    }, [projectName]);
 
     return (
         <Container>
@@ -56,10 +32,7 @@ const PageContent = () => {
                     </Row>
                     <Row>
                         <Col xs='12'>
-                            <ReactMarkdown components={components} children={projectInfo.markdownContent} />
-                            <h3>Background</h3>
-                            <p>Hello</p>
-                            <ReactMarkdown>## Hello, *world*!</ReactMarkdown>
+                            <MarkdownContent projectInfo={projectInfo} />
                         </Col>
                         <Col xs='12'>
                             <h3>Why it Matters</h3>
