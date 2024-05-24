@@ -34,18 +34,6 @@ const PageContent = () => {
                         <Col xs='12'>
                             <MarkdownContent projectInfo={projectInfo} />
                         </Col>
-                        <Col xs='12'>
-                            <h3>Why it Matters</h3>
-                        </Col>
-                        <Col xs='12'>
-                            <h3>Game Plan</h3>
-                        </Col>
-                        <Col xs='12'>
-                            <h3>Backend Setup</h3>
-                        </Col>
-                        <Col xs='12'>
-                            <h3>Frontend Setup</h3>
-                        </Col>
                     </Row>
                 </>
             ) : (

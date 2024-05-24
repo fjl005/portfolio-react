@@ -15,7 +15,7 @@ const MarkdownContent = ({ projectInfo }) => {
     );
 
     const ImageComponent = (props) => (
-        <img style={{ width: '100%', maxWidth: '1000px' }} {...props} alt='alt'>
+        <img style={{ maxWidth: '1000px' }} {...props} alt='alt'>
             {props.children}
         </img>
     );
