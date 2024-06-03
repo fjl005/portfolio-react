@@ -58,7 +58,7 @@ To set up the backend, we’ll need to go through the following:
 
 Now, let’s go through these one by one!
 
-#### Set up Express Application in server.js (part 1)
+#### 1. Set up Express Application in server.js (part 1)
 Before diving into the code, I needed to figure out the requirements for my application. In a nutshell, these include:
 * Express: the main framework for the backend server that will simplify the process of handling HTTP requests, defining routes, and implementing middleware. 
 * User authentication: People need to login to access their accounts, as well as log out. 
@@ -100,7 +100,39 @@ The middlewares used in this server include:
 
 Since we’ve already mentioned configuring passport and incorporating it as a middleware into our Express application, I think it makes sense to take a little detour from our server.js to talk about Passport!
 
-#### Configure and Incorporate Passport in passport-config.js
+#### 2. Configure and Incorporate Passport in passport-config.js
+
+Passport has been mentioned a couple times already. What is it, exactly? It’s a popular authentication middleware for Node.JS applications with various strategies, including username/password (local, which we’ll use), OAuth, etc. Passport will help ease the process of authenticating the user and generating sessions associated with the logged in user!
+
+##### A) Import Necessary Modules
+To use passport in our Express application, we need to first configure it given the various strategies available.
+
+![Passport Modules](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429230/portfolio/fetsy/code/passport_imports.png "Passport Modules")
+
+We will need to import the following:
+* Passport: because, well, we need passport. This imports the Passport.js library into this file.
+* LocalStrategy: we are importing specifically the Strategy constructor from the passport-local module. We only need this constructor function to create instances of the local authentication strategy. 
+    * There are a wide variety of strategies available on Passport, but we’re sticking with local strategy since we’ll only do a username/password login method. 
+* Bcrypt: a popular library used for securely salting and hashing passwords, and also comparing them. This is important because we don’t want to store passwords directly into our database for security reasons!
+* User: we’re importing the User model, which allows us to access user data from MongoDB.
+
+##### B) Define Local Strategy Authentication
+![Define Local Strategy](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429335/portfolio/fetsy/code/define_local_strategy.png "Define Local Strategy")
+
+
+![Options Object Required](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429567/portfolio/fetsy/code/options_object_required.png "Options Object Required")
+
+
+
+##### C) LocalStrategy "Verify" Callback Function
+
+
+##### D) SerializeUser
+
+
+##### To Summarize:
+
+
 
 
 
