@@ -117,17 +117,46 @@ We will need to import the following:
 * User: we’re importing the User model, which allows us to access user data from MongoDB.
 
 ##### B) Define Local Strategy Authentication
+In this passport-config file, we are defining an authentication strategy using Passport's *use* method. This method takes an instance of the authentication strategy, which, in this case, is **LocalStrategy**. The LocalStrategy constructor takes two arguments:
+1. An optional options object, which specifies the configuration options for the strategy. 
+    * In my code, since the HTML username and password input names already say "username" and "password" respectively, this object is not required.
+    * Here is an example where the username and password have HTML names "email" and "passwd" respectively, which would then require an options object.
+    ![Options Object Required](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429567/portfolio/fetsy/code/options_object_required.png "Options Object Required")
+
+2. A ‘verify’ callback function that is invoked when a user attempts to authenticate. This callback function accepts three arguments:
 ![Define Local Strategy](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429335/portfolio/fetsy/code/define_local_strategy.png "Define Local Strategy")
 
+    * **Username**: the username entered by the user.
+    * **Password**: the password entered by the user.
+    * **Done**: A 'done' callback function, which indicates whether the authentication was successful or not. This itself takes three parameters:
+        * **Error**: If an error occurs during the authentication process, this parameter should be set to the error object. Otherwise, it should be set to null.
+        * **User object**: If authentication is successful, this parameter should contain the user object associated with the authenticated user. If authentication fails, it should be set to false or null.
+        * **Info**: This is an optional argument that provides additional information about the authentication attempt, typically as an error message or other details.
 
-![Options Object Required](https://res.cloudinary.com/da7edv0cg/image/upload/v1717429567/portfolio/fetsy/code/options_object_required.png "Options Object Required")
+
+To further elaborate on the verify callback function, let's break down what's occuring in the 'done' callback function:
+![Done cb Function LocalStrategy](https://res.cloudinary.com/da7edv0cg/image/upload/v1718034752/portfolio/fetsy/code/done_cb_function_localStrategy.png "Done cb Function LocalStrategy")
 
 
+1. First, it finds if the username exists from the MongoDB database. If one doesn’t exist, then that means this username is fake! Or at least it’s not registered yet. Whatever the case, the done callback function is returned, with no error (since the function was run successfully), a null user object, and an error message saying no user was found.
+2. Instead, if the username does exist in our database, then we will use bcrypt to compare the entered password with the username’s hashed password from the database. Bcrypt will hash the recently entered password to compare the two. The bcrypt compare method takes three arguments:
+    * The entered password,
+    * The database hashed password,
+    * A callback function that takes two parameters: error and isMatch. 
+        * If there is an error during this process, it will throw an error into the catch block. 
+        * If it is a match, the 'done' function defined in the 'verify' callback function will be returned, having a null error and the correct user object. This will trigger the serialization process (discussed next).
+        * If the passwords don’t match, the 'done' function will have a null error (since the bcrypt method was technically successful despite the password being incorrect), a 'false' user, and an error message saying password incorrect. 
 
-##### C) LocalStrategy "Verify" Callback Function
+To invoke this local strategy, we need to use passport.authenticate associated with the /login endpoint. This will be run as a middleware function and assuming success, will continue the login process. 
+
+![LocalStrategy Login Middleware](https://res.cloudinary.com/da7edv0cg/image/upload/v1718034796/portfolio/fetsy/code/localStrategy_login_middleware.png "LocalStrategy Login Middleware")
+
+Assuming success, a session is generated! But how is the session created? We’ll need to use a method called serializeUser.
 
 
-##### D) SerializeUser
+##### C) Serialize User
+
+
 
 
 ##### To Summarize:
