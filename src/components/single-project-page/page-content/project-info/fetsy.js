@@ -154,14 +154,88 @@ To invoke this local strategy, we need to use passport.authenticate associated w
 Assuming success, a session is generated! But how is the session created? We’ll need to use a method called serializeUser.
 
 
-##### C) Serialize User
+##### C) Serialize User (and Deserialize)
+![SerializeUser](https://res.cloudinary.com/da7edv0cg/image/upload/v1720541531/portfolio/fetsy/code/image9_u0zyzj.png "SerializeUser")
+
+If authentication is complete and successful, the method **serializeUser** will be run. This takes a callback function, which has two arguments: 
+1. The User Object
+    * During the ‘verify’ callback function, if the hashed password comparison was successful, then the user object retrieved from MongoDB was passed into the ‘done.’ Because it was passed through ‘done’, it’s now available here, and we can serialize the user ID into this session for future HTTP requests. 
+2. A ‘done’ callback function
+
+The serializeUser function will then use this **unique identifier** (user.id) from the user object and store it in the session data. The session ID should be stored in the browser’s cookie such that in future HTTP requests, we pass along the session that can be deserialized to determine whether the user ID matches that from the MongoDB Database. 
+
+![DeserializeUser](https://res.cloudinary.com/da7edv0cg/image/upload/v1720541592/portfolio/fetsy/code/image3_frtmol.png "DeserializeUser")
+
+The deserializeUser follows the same format as serializeUser. There are a couple differences:
+* The function is asynchronous since we need to interact with the MongoDB database. 
+* Its first argument is the ID that was passed from the browser’s session, which we hope will match the ID from MongoDB assuming you’re you! 
 
 
+**After serialization, the user authentication process is complete!**
 
 
 ##### To Summarize:
+* When we use Local Strategy (authenticating with only username and password), we need to check if both match what’s in our database.
+* Ideally, the password would be salted and hashed (which we did via bcrypt) for security purposes.
+* Assuming a match, we take the user ID from the database (a unique identifier) and use it to serialize the given session.
+* When serialized, the session cookie will store this information and will be held in the browser.
+* In subsequent requests, the session cookie will be parsed by our backend server, and will deserialize the user ID in the cookie to verify it matches that from the database.
+* Assuming a match, your HTTP requests are golden!
 
 
+**Since we’ve been talking about storing the serialized ID in sessions and using sessions in subsequent requests, it now makes sense to talk about sessions in more detail!**
+
+
+
+#### 3. Create Sessions and MongoDB Store
+The **MongoDBStore** is a session store for Express applications that uses MongoDB to store session data. 
+
+
+##### A) Import MongoDB Store and Initialize it with Session
+![Import and Initialize MongoDB Store](https://res.cloudinary.com/da7edv0cg/image/upload/v1720542049/portfolio/fetsy/code/image11_i6iemp.png "Import and Initialize MongoDB Store")
+
+* We first import the MongoDBStore class from the ‘connect-mongodb-session’ and initialize it by passing the Express session middleware as an argument.
+
+
+##### B) Create a New Instance of the MongoDBStore
+![Instantiate MongoDB Store](https://res.cloudinary.com/da7edv0cg/image/upload/v1720542173/portfolio/fetsy/code/image19_f7ltsw.png "Instantiate MongoDB Store")
+
+The instance takes an options object as a parameter. The object contains the following properties:
+* URI: specifies the MongoDB connection URI where the session data will be stored.
+* TTL: sets the time to live (TTL) for the sessions in seconds. After this time period, the session will expire and be automatically deleted from the database.
+* Collection: specifies the name of the MongoDB collection where the session data will be stored.
+
+##### C) Set Up Error Handling
+![MongoDB Store Error Handling](https://res.cloudinary.com/da7edv0cg/image/upload/v1720542259/portfolio/fetsy/code/image5_phsr77.png "MongoDB Store Error Handling")
+
+If there is any error connecting to the MongoDB database for session storage, it will display this error in the console.
+
+
+##### D) Include Session Middleware to Express App, Configured Properly
+![Add Session Middleware to Express](https://res.cloudinary.com/da7edv0cg/image/upload/v1720542325/portfolio/fetsy/code/image21_z2igf2.png "Add Session Middleware to Express")
+
+Let’s break down each option in the argument passed into the session function:
+* Secret: a required option used to sign the session ID cookie. 
+    * It should be a string that is unique to your application. 
+    * It's typically a long, randomly generated string. In this code, it's set to process.env.SESSION_SECRET, indicating that the secret is retrieved from an environment variable named SESSION_SECRET.
+* Resave: determines whether the session should be saved back to the session store on every request, even if the session data was not modified during the request. 
+    * Setting it to false avoids unnecessary session updates, improving performance and reducing storage usage.
+* saveUninitialized: This option indicates whether a session should be saved in the session store even if it's uninitialized (i.e., new, but not modified). 
+    * Setting it to false ensures that a session is only created when it's modified, which can help reduce storage usage. So, we’re only saving initialized sessions!
+* store: specifies the session store where session data will be stored, which will be the MongoDBStore instance initialized earlier. 
+    * This means that session data will be stored in MongoDB using the configured MongoDBStore.
+* cookie: configure the session cookie settings. 
+    * maxAge: the time the session cookie will expire (in milliseconds) after inactivity. 
+    * httpOnly: session cookie is only accessible via HTTP(S) requests and cannot be accessed by client-side JavaScript, providing extra security.
+    * Secure: If set to true, then the session cookie can only be sent over secure HTTPS connections, providing further protection. It shouldn’t be set to true during development, but should be for production.
+    * sameSite: allows you to control when the session cookie should be sent in cross-origin requests.
+        * Strict: only sent in requests originating from the same site as the server.
+        * Lax: less restrictive compared to strict; cookie can only be sent in cross-origin GET requests.
+        * None: can be sent in all cross-origin requests. However, this requires that the secure attribute is set to true.
+
+
+(4) Resume Express Setup in server.js (part 2)
+After our little detour talking about Passport authentication, MongoDB Store, and Sessions, let’s resume back to our server.js file that we had mentioned in the first section. 
 
 
 
